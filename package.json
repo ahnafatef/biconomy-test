@@ -1,0 +1,32 @@
+{
+  "name": "swc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@biconomy/mexa": "2.0.36",
+    "ethers": "^5.6.9",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "serve": "^14.0.1",
+    "webpack": "4.x",
+    "webpack-cli": "3.x",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "scripts": {
+    "bundle": "webpack --config webpack.config.js",
+    "start": "yarn clean && yarn bundle && yarn serve ./html",
+    "clean": "rm -rf ./html/bundle.js",
+    "build": "yarn clean && yarn bundle"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  }
+}

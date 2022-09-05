@@ -1,0 +1,35 @@
+<html>
+<head>
+
+    <title>Biconomy Test</title>
+
+    <!-- <script src="bundle.js"> -->
+    </script>
+
+</head>
+<body>
+<h2>Biconomy Test</h2>
+
+
+<button id="wallet_deploy" disabled onClick="window.app.deployWallet()">
+    Deploy wallet
+</button>
+
+<button id="check_wallet" disabled onClick="window.app.checkWalletExists()">
+    Check wallet
+</button>
+
+<p id="swc"></p>
+<p id="err"></p>
+<hr/>
+
+<button id="transact" disabled onClick="window.app.transact()">Transact</button>
+
+<script src="bundle.js"></script>
+<script>
+    window.app.initBiconomy().then(() => {
+        console.log('done...')
+    })
+</script>
+</body>
+</html>
