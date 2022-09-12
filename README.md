@@ -1,3 +1,3 @@
-use webpack
-    use loaders
-        use babel to transpile es6 into browser compatible js
+###Requirements:
+
+- use at least node v14.16.1
