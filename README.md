@@ -1,3 +1,3 @@
 ### Requirements:
 
-- use atleast node v14.16.1
+- use at least node v14.16.1
